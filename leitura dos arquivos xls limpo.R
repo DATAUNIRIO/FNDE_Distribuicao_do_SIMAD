@@ -61,7 +61,7 @@ DADOS<-c()
 nomes<-c("SERIE_ANO","OBJETO","CRITERIO","QTDE_OBJETO_ADQUIRIDO")
 
 local<-'C:/Users/Hp/Documents/DIRETORIO DE TRABALHO DO R/FNDE Simas/'
-ano<-'2017/'
+ano<-'2018/'
 setwd(paste0(local,ano))
 getwd()
 
@@ -114,13 +114,13 @@ for (i in filenames) {
 
 
 tail(DADOS)
-DADOS2017<-DADOS
+DADOS2018<-DADOS
 remove(DADOS)
 
 local<-'C:/Users/Hp/Documents/DIRETORIO DE TRABALHO DO R/FNDE Simas/'
 setwd(local)
-save(DADOS2017,file = 'DADOS2017.RData')
-write.csv(DADOS2017,file = 'DADOS2017.csv')
+save(DADOS2018,file = 'DADOS2018.RData')
+write.csv(DADOS2018,file = 'DADOS2018.csv')
 
 
 # no banco de 2015 tem um problema de enconding
@@ -133,3 +133,7 @@ write.csv(DADOS2017,file = 'DADOS2017.csv')
 # no banco de 2016 os arquivos 000000064976.xls  000000256996.xls 000000270714.xls
 #estao corrompidos.
 # deletei os dois
+
+# no banco de 2018 os arquivos 000000038773.xls
+#estao corrompidos.
+# deletei 
