@@ -67,3 +67,28 @@ ping(urls[i]) # good site
 ping_port("www.google.com", port = 80, count = 1)
 
 # Thanks, but using ping() I get only NAs for any site. Even for ping("amazon.com"). Following the pingr documentation, this one works fine: ping_port("www.google.com", port = 80, count = 1).
+
+
+#----------------------------------------------------------------------------------------
+# Metodo 04
+# Regular Expression (Regex)
+#----------------------------------------------------------------------------------------
+
+# #devtools::install_github("VerbalExpressions/RVerbalExpressions")
+library(RVerbalExpressions)
+
+# construct an expression
+x <- rx_start_of_line() %>% 
+  rx_find('http') %>% 
+  rx_maybe('s') %>% 
+  rx_find('://') %>% 
+  rx_maybe('www.') %>% 
+  rx_anything_but(' ') %>% 
+  rx_end_of_line()
+
+# print the expression
+x
+# test for a match
+grepl(x, "https://www.google.com")
+
+
