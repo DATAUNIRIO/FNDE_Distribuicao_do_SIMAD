@@ -113,7 +113,7 @@ for (i in filenames) {
 ##########################################
 
 
-tail(DADOS)
+tail(DADOS,120)
 DADOS2018<-DADOS
 remove(DADOS)
 
@@ -134,6 +134,6 @@ write.csv(DADOS2018,file = 'DADOS2018.csv')
 #estao corrompidos.
 # deletei os dois
 
-# no banco de 2018 os arquivos 000000038773.xls
+# no banco de 2018 os arquivos 000000038773.xls , 000000785640.xls, 000000786809.xls e 000000787280.xls
 #estao corrompidos.
-# deletei 
+# deletei os quatro
