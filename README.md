@@ -21,6 +21,6 @@ for (i in 101280:110000) {
 # Check if URL exists
 This functions is analogous to file.exists and determines whether a request for a specific URL responds without error. We make the request but ask the server not to return the body. We just process the header.
 
-library(RCurl)
-url.exists("http://www.omegahat.net/RCurl")
-try(url.exists("http://www.omegahat.net/RCurl-xxx"))
+library(RCurl)  
+url.exists("http://www.omegahat.net/RCurl")  
+try(url.exists("http://www.omegahat.net/RCurl-xxx"))  
