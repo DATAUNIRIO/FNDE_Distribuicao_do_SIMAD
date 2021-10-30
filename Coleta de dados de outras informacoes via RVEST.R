@@ -62,26 +62,28 @@
 #
 #----------------------------------------------------------------------------------------
 
+local<-'C:/Users/Hp/Documents/DIRETORIO DE TRABALHO DO R/FNDE Simas/'
+setwd(local)
+
 library(readr)
-resultado <- read_csv("C:/Users/Steven/Documents/GitHub/FNDE_Distribuicao_do_SIMAD/links/resultado2018.txt", 
+resultado <- read_csv("C:/Users/Hp/Documents/GitHub/FNDE_Distribuicao_do_SIMAD/links/resultado2018.txt", 
                       col_names = FALSE)
 #View(resultado)
 
-setwd("C:/Users/Hp/Documents/DIRETORIO DE TRABALHO DO R/")
 
 numeroEntidade<-resultado$X2
 tail(numeroEntidade)
 length(numeroEntidade)
 remove(resultado)
 
-#numeroEntidade2<-numeroEntidade
+numeroEntidade2<-numeroEntidade
+remove(numeroEntidade)
 #numeroEntidade2<-numeroEntidade[113526:119385]
 length(numeroEntidade2)
 class(numeroEntidade2)
-numeroEntidade2<-numeroEntidade[112469:112469]
-numeroEntidade2<-tail(numeroEntidade,30)
-
-numeroEntidade2[51]<-as.character(000000346764)
+#numeroEntidade2<-numeroEntidade[112469:112469]
+#numeroEntidade2<-sample(numeroEntidade2,3000)
+#numeroEntidade2[51]<-as.character(000000346764)
 
 
 library(rvest)

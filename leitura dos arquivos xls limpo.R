@@ -137,3 +137,4 @@ write.csv(DADOS2018,file = 'DADOS2018.csv')
 # no banco de 2018 os arquivos 000000038773.xls , 000000785640.xls, 000000786809.xls e 000000787280.xls
 #estao corrompidos.
 # deletei os quatro
+
